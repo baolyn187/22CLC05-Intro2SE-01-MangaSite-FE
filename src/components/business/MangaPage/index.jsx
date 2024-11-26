@@ -1,6 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { getMangaByID, getChapterList, getRatings } from "@/services/manga";
-import { useParams } from "react-router-dom";
 import { FaFlag, FaCommentAlt } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 import styles from "./MangaPage.module.css";
@@ -9,9 +10,7 @@ import StarRating from "@/components/common/StarRating";
 import RatingForm from "@/components/form/RatingForm";
 import NotificationForm from "@/components/form/NotificationForm";
 
-const MangaPage = () => {
-  const { id } = useParams();
-
+const MangaPage = ({ id }) => {
   const [manga, setManga] = useState({ a: "a" });
   const [chapters, setChapters] = useState([]);
   const [page, setPage] = useState(1);
@@ -96,7 +95,7 @@ const MangaPage = () => {
         <div className={styles.rightColumnContainer}>
           <div className={styles.details}>
             <div>
-              <h1>{manga.name}</h1>
+              <h1 className={styles.mangeMame}>{manga.name}</h1>
               {manga.authors &&
                 manga.authors.map((author, index) => (
                   <span key={author.id} className={styles.authorName}>

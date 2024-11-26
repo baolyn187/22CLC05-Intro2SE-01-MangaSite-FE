@@ -1,4 +1,4 @@
-import styles from "./Notification.module.css";
+import styles from "./NotificationForm.module.css";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaCircleExclamation } from "react-icons/fa6";
 
