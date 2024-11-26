@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import MangaSlide from "@/components/layout/MangaSlide";
-import { getMangas } from "@/services/manga";
+import { getMangas } from "@/services/mangas";
 
 const HomePage = () => {
   const [mangas, setMangas] = useState([]);

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getMangaByID, getChapterList, getRatings } from "@/services/manga";
+import { getMangaByID, getChapterList, getRatings } from "@/services/mangas";
 import { FaFlag, FaCommentAlt } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 import styles from "./MangaPage.module.css";

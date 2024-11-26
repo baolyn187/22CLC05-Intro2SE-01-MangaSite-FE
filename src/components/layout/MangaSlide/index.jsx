@@ -1,10 +1,10 @@
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 import styles from "./MangaSlide.module.css";
 
 const MangaCarousel = (props) => {
-  // const navigate = useNavigate();
+  const router = useRouter()
   const mangaClickHandler = (id) => {
-    // navigate(`/mangas/${id}`, );
+    router.push(`/mangas/${id}`, );
   };
 
   return (
@@ -15,7 +15,7 @@ const MangaCarousel = (props) => {
           {props.mangas && props.mangas.length ? (
             props.mangas.map((manga) => (
               <li key={manga._id} onClick={() => mangaClickHandler(manga._id)}>
-                <Image className={styles.mangaCover} alt="manga-cover" src={manga.cover} />
+                <img className={styles.mangaCover} alt="manga-cover" src={manga.cover} />
                 <div className={styles.mangaName}>{manga.name}</div>
               </li>
             ))
