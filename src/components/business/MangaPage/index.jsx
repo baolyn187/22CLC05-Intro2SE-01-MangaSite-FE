@@ -98,7 +98,7 @@ const MangaPage = ({ id }) => {
               <h1 className={styles.mangeMame}>{manga.name}</h1>
               {manga.authors &&
                 manga.authors.map((author, index) => (
-                  <span key={author.id} className={styles.authorName}>
+                  <span key={author._id} className={styles.authorName}>
                     {author.name}
                     {index < manga.authors.length - 1 && ",\u00A0"}
                   </span>
